@@ -1,6 +1,147 @@
 #include <iostream>
-
+#include <string>
 int main(int argc, char *argv[])
 {
-	std::cout << "Hello world!" << std::endl;
+	std::string heroes[] = {"abaddon",
+					  "alchemist",
+					  "ancient-apparition",
+					  "anti-mage",
+					  "arc-warden",
+					  "axe",
+					  "bane",
+					  "batrider",
+					  "beastmaster",
+					  "bloodseeker",
+					  "bounty-hunter",
+					  "brewmaster",
+					  "bristleback",
+					  "broodmother",
+					  "centaur-warrunner",
+					  "chaos-knight",
+					  "chen",
+					  "clinkz",
+					  "clockwerk",
+					  "crystal-maiden",
+					  "dark-seer",
+					  "dark-willow",
+					  "dawnbreaker",
+					  "dazzle",
+					  "death-prophet",
+					  "disruptor",
+					  "doom",
+					  "dragon-knight",
+					  "drow-ranger",
+					  "earth-spirit",
+					  "earthshaker",
+					  "elder-titan",
+					  "ember-spirit",
+					  "enchantress",
+					  "enigma",
+					  "faceless-void",
+					  "grimstroke",
+					  "gyrocopter",
+					  "huskar",
+					  "invoker",
+					  "io",
+					  "jakiro",
+					  "juggernaut",
+					  "keeper-of-the-light",
+					  "kunkka",
+					  "legion-commander",
+					  "leshrac",
+					  "lich",
+					  "lifestealer",
+					  "lina",
+					  "lion",
+					  "lone-druid",
+					  "luna",
+					  "lycan",
+					  "magnus",
+					  "mars",
+					  "medusa",
+					  "meepo",
+					  "mirana",
+					  "monkey-king",
+					  "morphling",
+					  "naga-siren",
+					  "natures-prophet",
+					  "necrophos",
+					  "night-stalker",
+					  "nyx-assassin",
+					  "ogre-magi",
+					  "omniknight",
+					  "oracle",
+					  "outworld-devourer",
+					  "pangolier",
+					  "phantom-assassin",
+					  "phantom-lancer",
+					  "phoenix",
+					  "puck",
+					  "pudge",
+					  "pugna",
+					  "queen-of-pain",
+					  "razor",
+					  "riki",
+					  "rubick",
+					  "sand-king",
+					  "shadow-demon",
+					  "shadow-fiend",
+					  "shadow-shaman",
+					  "silencer",
+					  "skywrath-mage",
+					  "slardar",
+					  "slark",
+					  "snapfire",
+					  "sniper",
+					  "spectre",
+					  "spirit-breaker",
+					  "storm-spirit",
+					  "sven",
+					  "techies",
+					  "templar-assassin",
+					  "terrorblade",
+					  "tidehunter",
+					  "timbersaw",
+					  "tinker",
+					  "tiny",
+					  "treant-protector",
+					  "troll-warlord",
+					  "tusk",
+					  "underlord",
+					  "undying",
+					  "ursa",
+					  "vengeful-spirit",
+					  "venomancer",
+					  "viper",
+					  "visage",
+					  "void-spirit",
+					  "warlock",
+					  "weaver",
+					  "windranger",
+					  "winter-wyvern",
+					  "witch-doctor",
+					  "wraith-king",
+					  "zeus"};
+	std::string counters[] = {"Shadow Demon', 'Dark Seer', 'Slark', 'Meepo', 'Undying'", "'Huskar', 'Monkey King', 'Slark', 'Troll Warlord', 'Shadow Fiend'", "'Anti-Mage', 'Lycan', 'Storm Spirit', 'Clinkz', 'Broodmother'", "'Meepo', 'Lone Druid', 'Troll Warlord', 'Slardar', 'Legion Commander'", "'Meepo', 'Broodmother', 'Lycan', 'Lone Druid', 'Chaos Knight'", "'Batrider', 'Death Prophet', 'Venomancer', 'Outworld Destroyer', 'Ursa'", "'Meepo', 'Visage', 'Naga Siren', 'Chaos Knight', 'Undying'", "'Slark', 'Beastmaster', 'Oracle', 'Weaver', 'Queen of Pain'", "'Winter Wyvern', 'Tidehunter', 'Enchantress', 'Pangolier', 'Medusa'", "'Medusa', 'Juggernaut', 'Natures Prophet', 'Lifestealer', 'Brewmaster'", "'Naga Siren', 'Meepo', 'Phantom Lancer', 'Beastmaster', 'Huskar'", "'Chen', 'Anti-Mage', 'Weaver', 'Faceless Void', 'Storm Spirit'", "'Viper', 'Silencer', 'Slark', 'Drow Ranger', 'Legion Commander'", "'Legion Commander', 'Naga Siren', 'Earthshaker', 'Meepo', 'Sven'", "'Bristleback', 'Dazzle', 'Batrider', 'Templar Assassin', 'Lifestealer'", "'Naga Siren', 'Phantom Lancer', 'Sand King', 'Timbersaw', 'Medusa'", "'Tusk', 'Naga Siren', 'Chaos Knight', 'Undying', 'Weaver'", "'Meepo', 'Naga Siren', 'Phantom Lancer', 'Bounty Hunter', 'Broodmother'", "'Broodmother', 'Phantom Lancer', 'Visage', 'Meepo', 'Anti-Mage'", "'Pudge', 'Juggernaut', 'Monkey King', 'Enigma', 'Bristleback'", "'Oracle', 'Clinkz', 'Bristleback', 'Leshrac', 'Faceless Void'", "'Natures Prophet', 'Naga Siren', 'Pugna', 'Juggernaut', 'Techies'", "'Bristleback', 'Dark Willow', 'Winter Wyvern', 'Faceless Void', 'Underlord'", "'Morphling', 'Ancient Apparition', 'Monkey King', 'Pangolier', 'Night Stalker'", "'Medusa', 'Terrorblade', 'Natures Prophet', 'Anti-Mage', 'Undying'", "'Shadow Demon', 'Huskar', 'Phantom Assassin', 'Lone Druid', 'Legion Commander'", "'Meepo', 'Arc Warden', 'Wraith King', 'Broodmother', 'Chaos Knight'", "'Dark Seer', 'Terrorblade', 'Viper', 'Huskar', 'Underlord'", "'Lycan', 'Mars', 'Phantom Lancer', 'Natures Prophet', 'Spectre'", "'Batrider', 'Death Prophet', 'Sven', 'Lycan', 'Spirit Breaker'", "'Viper', 'Clockwerk', 'Batrider', 'Gyrocopter', 'Monkey King'", "'Brewmaster', 'Clinkz', 'Enchantress', 'Visage', 'Chen'", "'Huskar', 'Techies', 'Slark', 'Lone Druid', 'Troll Warlord'", "'Phantom Lancer', 'Medusa', 'Pugna', 'Naga Siren', 'Morphling'", "'Rubick', 'Wraith King', 'Bristleback', 'Medusa', 'Spectre'", "'Meepo', 'Lone Druid', 'Chaos Knight', 'Naga Siren', 'Huskar'", "'Razor', 'Shadow Demon', 'Lycan', 'Clinkz', 'Drow Ranger'", "'Brewmaster', 'Juggernaut', 'Lifestealer', 'Ancient Apparition', 'Arc Warden'", "'Ancient Apparition', 'Necrophos', 'Viper', 'Timbersaw', 'Death Prophet'", "'Void Spirit', 'Lycan', 'Templar Assassin', 'Natures Prophet', 'Broodmother'", "'Chen', 'Bristleback', 'Troll Warlord', 'Sven', 'Batrider'", "'Juggernaut', 'Rubick', 'Lifestealer', 'Tidehunter', 'Morphling'", "'Natures Prophet', 'Chen', 'Death Prophet', 'Ursa', 'Beastmaster'", "'Huskar', 'Faceless Void', 'Phantom Assassin', 'Weaver', 'Batrider'", "'Lifestealer', 'Juggernaut', 'Death Prophet', 'Winter Wyvern', 'Sniper'", "'Troll Warlord', 'Dawnbreaker', 'Winter Wyvern', 'Monkey King', 'Oracle'", "'Sniper', 'Drow Ranger', 'Keeper of the Light', 'Ursa', 'Sven'", "'Anti-Mage', 'Phoenix', 'Pugna', 'Bristleback', 'Pangolier'", "'Razor', 'Natures Prophet', 'Enigma', 'Broodmother', 'Windranger'", "'Beastmaster', 'Sniper', 'Phantom Assassin', 'Templar Assassin', 'Axe'", "'Beastmaster', 'Rubick', 'Io', 'Pugna', 'Lone Druid'", "'Winter Wyvern', 'Phantom Assassin', 'Bristleback', 'Enchantress', 'Huskar'", "'Spectre', 'Medusa', 'Broodmother', 'Rubick', 'Dark Seer'", "'Naga Siren', 'Troll Warlord', 'Phoenix', 'Meepo', 'Bristleback'", "'Troll Warlord', 'Huskar', 'Faceless Void', 'Tinker', 'Winter Wyvern'", "'Lone Druid', 'Phantom Lancer', 'Ember Spirit', 'Riki', 'Meepo'", "'Anti-Mage', 'Sniper', 'Broodmother', 'Nyx Assassin', 'Underlord'", "'Elder Titan', 'Winter Wyvern', 'Earthshaker', 'Leshrac', 'Jakiro'", "'Naga Siren', 'Meepo', 'Bounty Hunter', 'Lone Druid', 'Broodmother'", "'Batrider', 'Tinker', 'Zeus', 'Venomancer', 'Windranger'", "'Axe', 'Anti-Mage', 'Outworld Destroyer', 'Ancient Apparition', 'Puck'", "'Leshrac', 'Underlord', 'Sand King', 'Dark Seer', 'Earthshaker'", "'Spectre', 'Meepo', 'Naga Siren', 'Morphling', 'Phantom Assassin'", "'Ancient Apparition', 'Viper', 'Anti-Mage', 'Skywrath Mage', 'Sniper'", "'Naga Siren', 'Meepo', 'Lone Druid', 'Terrorblade', 'Huskar'", "'Beastmaster', 'Lone Druid', 'Templar Assassin', 'Lifestealer', 'Slardar'", "'Phantom Lancer', 'Naga Siren', 'Natures Prophet', 'Chaos Knight', 'Anti-Mage'", "'Necrophos', 'Dark Seer', 'Outworld Destroyer', 'Weaver', 'Ancient Apparition'", "'Razor', 'Meepo', 'Bristleback', 'Templar Assassin', 'Naga Siren'", "", "'Clinkz', 'Bloodseeker', 'Juggernaut', 'Techies', 'Razor'", "'Morphling', 'Tiny', 'Phoenix', 'Pudge', 'Earth Spirit'", "'Ember Spirit', 'Dark Seer', 'Leshrac', 'Puck', 'Sand King'", "'Lina', 'Morphling', 'Chen', 'Clinkz', 'Juggernaut'", "'Templar Assassin', 'Lone Druid', 'Night Stalker', 'Alchemist', 'Clinkz'", "'Lycan', 'Death Prophet', 'Lone Druid', 'Ursa', 'Chen'", "'Anti-Mage', 'Pudge', 'Ogre Magi', 'Sniper', 'Medusa'", "'Medusa', 'Huskar', 'Puck', 'Legion Commander', 'Abaddon'", "'Naga Siren', 'Morphling', 'Weaver', 'Anti-Mage', 'Natures Prophet'", "'Naga Siren', 'Underlord', 'Bounty Hunter', 'Zeus', 'Meepo'", "'Batrider', 'Tinker', 'Templar Assassin', 'Pugna', 'Ember Spirit'", "'Zeus', 'Bristleback', 'Anti-Mage', 'Juggernaut', 'Underlord'", "'Phantom Lancer', 'Riki', 'Meepo', 'Timbersaw', 'Underlord'", "'Batrider', 'Templar Assassin', 'Tiny', 'Visage', 'Ursa'", "'Meepo', 'Phantom Lancer', 'Naga Siren', 'Terrorblade', 'Lone Druid'", "'Phantom Lancer', 'Naga Siren', 'Lycan', 'Broodmother', 'Abaddon'", "'Medusa', 'Chaos Knight', 'Phantom Lancer', 'Wraith King', 'Oracle'", "'Terrorblade', 'Naga Siren', 'Phantom Lancer', 'Tidehunter', 'Luna'", "'Necrophos', 'Disruptor', 'Grimstroke', 'Leshrac', 'Outworld Destroyer'", "'Faceless Void', 'Doom', 'Bane', 'Lycan', 'Brewmaster'", "'Morphling', 'Spectre', 'Storm Spirit', 'Lycan', 'Phantom Assassin'", "'Undying', 'Viper', 'Chen', 'Necrophos', 'Warlock'", "'Underlord', 'Necrophos', 'Ember Spirit', 'Dark Willow', 'Meepo'", "'Anti-Mage', 'Meepo', 'Lone Druid', 'Medusa', 'Troll Warlord'", "'Troll Warlord', 'Templar Assassin', 'Medusa', 'Phantom Assassin', 'Terrorblade'", "'Wraith King', 'Templar Assassin', 'Arc Warden', 'Pudge', 'Anti-Mage'", "'Meepo', 'Batrider', 'Phantom Lancer', 'Terrorblade', 'Viper'", "'Dark Seer', 'Phantom Lancer', 'Tinker', 'Axe', 'Sand King'", "'Razor', 'Juggernaut', 'Slark', 'Grimstroke', 'Bloodseeker'", "'Silencer', 'Outworld Destroyer', 'Death Prophet', 'Pugna', 'Nyx Assassin'", "'Anti-Mage', 'Storm Spirit', 'Pugna', 'Zeus', 'Chen'", "'Necrophos', 'Venomancer', 'Batrider', 'Viper', 'Lifestealer'", "'Phoenix', 'Batrider', 'Timbersaw', 'Morphling', 'Slark'", "'Tinker', 'Razor', 'Outworld Destroyer', 'Ogre Magi', 'Windranger'", "'Monkey King', 'Terrorblade', 'Dark Willow', 'Troll Warlord', 'Templar Assassin'", "'Juggernaut', 'Sniper', 'Rubick', 'Ursa', 'Lifestealer'", "'Medusa', 'Pangolier', 'Timbersaw', 'Luna', 'Gyrocopter'", "'Venomancer', 'Windranger', 'Phantom Lancer', 'Razor', 'Templar Assassin'", "'Naga Siren', 'Phantom Lancer', 'Terrorblade', 'Medusa', 'Winter Wyvern'", "'Phantom Lancer', 'Huskar', 'Arc Warden', 'Legion Commander', 'Terrorblade'", "'Phantom Lancer', 'Morphling', 'Terrorblade', 'Chaos Knight', 'Juggernaut'", "'Naga Siren', 'Chen', 'Bristleback', 'Winter Wyvern', 'Phantom Lancer'", "'Meepo', 'Lone Druid', 'Night Stalker', 'Underlord', 'Io'", "'Broodmother', 'Lycan', 'Bristleback', 'Huskar', 'Slark'", "'Faceless Void', 'Techies', 'Clinkz', 'Mars', 'Drow Ranger'", "'Centaur Warrunner', 'Mars', 'Shadow Demon', 'Axe', 'Spectre'", "'Tinker', 'Timbersaw', 'Anti-Mage', 'Pugna', 'Huskar'", "'Bristleback', 'Morphling', 'Brewmaster', 'Chen', 'Natures Prophet'", "'Phantom Lancer', 'Underlord', 'Undying', 'Bristleback', 'Alchemist'", "'Anti-Mage', 'Lone Druid', 'Broodmother', 'Storm Spirit', 'Chen'"};
+	int n = sizeof(heroes)/sizeof(heroes[0]);
+    std::string elem = argv[1];
+    int i = 0;
+    while (i < n)
+    {
+        if (heroes[i] == elem) {
+            break;
+        }
+        i++;
+    }
+ 
+    if (i < n)
+    {
+        std::cout << "Counters for hero " << elem << " is: "
+             << "\n"<<counters[i]<<std::endl;
+    }
+    else {
+        std::cout << "Element is not present in the given array";
+    }
+ 
+    return 0;
 }
